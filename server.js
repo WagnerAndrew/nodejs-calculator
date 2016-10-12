@@ -17,11 +17,8 @@ app.use(methodOverride());
 app.use(cors());
 
 //calculator
-app.get('/add/:num1/:num2', function (req, res) {
-  var value = { result: parseInt(req.params.num1) + parseInt(req.params.num2) , from: "NodeJs services"};
-  res.setHeader('Content-Type', 'application/json');
-  res.send(JSON.stringify(value));
-});
+var calculatorRoutes = require('./app/calculator/controllers/calculator');
+app.use('/', calculatorRoutes);
 
 
 // Running
