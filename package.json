@@ -6,7 +6,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "mocha ---recursive"
+    "test": "mocha --recursive"
   },
   "dependencies": {
     "express": "^4.13.3"
