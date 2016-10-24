@@ -2,4 +2,7 @@ deployment:
   dockerhub:
     branch: master
     commands:
-      - $DOCKER_HUB_TRIGGER
+      - $DOCKER_HUB_TRIGGER_JS
+dependencies:
+  override:
+    - npm install --dev
